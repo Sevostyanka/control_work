@@ -11,3 +11,15 @@ void PrintMass (string[] arr)
         Console.Write($"{arr[i]}, ");
     }
 }
+
+// метод укорачивания массива, выдаёт случайные позиции из первичного массива:
+string[] ShortString (string[] array)
+{
+    string[] shortArr = new string[new Random().Next(0,4)];
+    for (int i = 0; i < shortArr.Length; i++)
+    {
+        shortArr[i] = array[new Random().Next(0,array.Length)];
+    }
+    return shortArr;
+}
+
